@@ -1,0 +1,273 @@
+{
+  "Data": {
+    "path": "../data/stage1.train.uci.tsv",
+    "format": "TSV",
+    "labeling": {
+      "onlyDecisive": true,
+      "winnerMovesOnly": true,
+      "labelAllMovesInDraws": false
+    },
+    "filters": {
+      "minLegalMoves": 1,
+      "phase": "Any"
+    }
+  },
+  "Stage1": {
+    "population": 100,
+    "generations": 75,
+    "crossoverRate": 0.7,
+    "mutationRate": 1.0,
+    "batchSize": 4000,
+    "ply": 1
+  },
+  "Stage2": {
+    "population": 10,
+    "generations": 20,
+    "crossoverRate": 0.7,
+    "mutationRate": 0.05,
+    "gamesPerPair": 4,
+    "openingBookPath": "data/openings.fens",
+    "useHallOfFame": true,
+    "hallOfFameSize": 10,
+    "searchDepth": 2,
+    "searchMode": "FixedDepth",
+    "timePerMoveMs": 0,
+    "perMoveNodeCap": 20000
+  },
+  "GA": {
+    "selectionType": "tournament",
+    "tournamentK": 3,
+    "bitFlipRate": 0.005,
+    "crossoverType": "uniform-per-gene",
+    "elitism": 1
+  },
+  "Genome": {
+    "schemaId": "smoke",
+    "genes": [
+      {
+        "name": "Material.Knight",
+        "bitWidth": 8,
+        "min": 200,
+        "max": 450,
+        "constraintFlags": []
+      },
+      {
+        "name": "Material.Bishop",
+        "bitWidth": 8,
+        "min": 200,
+        "max": 450,
+        "constraintFlags": []
+      },
+      {
+        "name": "Material.Rook",
+        "bitWidth": 9,
+        "min": 350,
+        "max": 650,
+        "constraintFlags": []
+      },
+      {
+        "name": "Material.Queen",
+        "bitWidth": 10,
+        "min": 700,
+        "max": 1100,
+        "constraintFlags": []
+      },
+      {
+        "name": "BishopPairBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "TempoBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "DoubledPawnPenalty",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "IsolatedPawnPenalty",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "BackwardPawnPenalty",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "WeakSquarePenalty",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "PassedPawnBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "ProtectedPassedPawnBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "ConnectedPassedBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "PassedPawnEnemyKingDistBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "PawnShieldBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "OpenFileToKingPenalty",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "SemiOpenFileToKingPenalty",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "KingAttackUnit",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "BishopMobility",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookMobility",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "QueenMobility",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookOpenFileBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookSemiOpenFileBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookSeventhRankBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookConnectedBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookBehindPassedPawnBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookAttackKingFileBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookAttackKingFileAdjBonus",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "RookAttackWeakPawnOpenColumn",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "KNIGHT_SQ_MULT",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      },
+      {
+        "name": "KNIGHT_OUTPOST_MULT",
+        "bitWidth": 6,
+        "min": 0,
+        "max": 63,
+        "constraintFlags": []
+      }
+    ]
+  },
+  "Rng": {
+    "seed": 2003
+  },
+  "Output": {
+    "checkpointsDir": "../artifacts_stage1_v2_003/checkpoints",
+    "metricsFile": "../artifacts_stage1_v2_003/metrics.csv"
+  }
+}

@@ -1,0 +1,39 @@
+# .NET / VS
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+.vs/
+*.user
+*.suo
+*.rsuser
+*.sln.docstates
+*.cache
+*.ide
+*.code-workspace
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Test/coverage
+TestResult.xml
+*.VisualState.xml
+coverage*.{json,xml,info}
+*.coverage
+*.coveragexml
+
+# Local runtime artifacts
+ChessGP/artifacts*/
+ChessGP/artifacts_smoke/
+
+# Others
+artifacts/
+.env
+node_modules/
+plan.md
