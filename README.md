@@ -109,4 +109,9 @@ The developer manual explains the code structure, important classes, configurati
 
 ## Academic context
 
-This project was developed as part of an academic thesis project about genetic optimization of chess evaluation parameters. The thesis discusses the motivation, design, experiments, and results in more detail, while this repository provides the source code, documentation, data files, and selected experiment artifacts.
+This project was developed as part of my bachelor's thesis **Genetic Algorithms for Evolving Chess Evaluation Functions**, defended at Charles University, Faculty of Mathematics and Physics, in 2026.
+
+The thesis discusses the motivation, design, implementation, experiments, and results, while this repository provides the source code, documentation, datasets, and selected experiment artifacts.
+
+- **[Read the full bachelor's thesis (PDF)](docs/bachelor_thesis.pdf)**
+- [Official thesis record – Charles University Digital Repository](https://dspace.cuni.cz/handle/20.500.11956/213680)
